@@ -148,17 +148,7 @@ noBtn.addEventListener("mouseover", () => {
 /* YES click */
 document.getElementById("yes").addEventListener("click", () => {
   const music = document.getElementById("music");
-
-  music.currentTime = 0; // restart
-  music.volume = 1;
-
-  const playPromise = music.play();
-
-  if (playPromise !== undefined) {
-    playPromise.catch(() => {
-      alert("Tap again to enable sound 🎵");
-    });
-  }
+  music.play();
 
   document.getElementById("secret").style.display = "block";
 
