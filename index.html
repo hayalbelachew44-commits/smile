@@ -100,7 +100,7 @@
 <body>
 
 <!-- 🎵 MUSIC (replace file with your own mp3 if you want) -->
-<audio id="music" autoplay loop>
+<audio id="music" loop>
   <source src="music.mp3" type="audio/mp3">
 </audio>
 
@@ -147,6 +147,8 @@ noBtn.addEventListener("mouseover", () => {
 
 /* YES click */
 document.getElementById("yes").addEventListener("click", () => {
+  document.getElementById("music").play();
+
   document.getElementById("secret").style.display = "block";
 
   for (let i = 0; i < 50; i++) {
